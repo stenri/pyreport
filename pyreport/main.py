@@ -417,6 +417,7 @@ def py2commentblocks(string, firstlinenum, options):
             lines = tokencontent.splitlines()
             lines = map(lambda z : z + "\n", lines[:])
             for line in lines:
+                line = line.lstrip()
                 if line[0:3] == "#!/" and reallinenum == 1:
                     # This is a "#!/foobar on the first line, this 
                     # must be an executable call
